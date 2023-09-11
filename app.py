@@ -72,6 +72,6 @@ def predict():
 
 
 
-#if __name__ == '__main__':
- #app.run()
- #print('start api')
+if __name__ == '__main__':
+ app.run()
+ print('start api')
