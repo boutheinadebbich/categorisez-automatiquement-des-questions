@@ -1,6 +1,7 @@
 from flask import Flask, request, jsonify
 import pickle
 import nltk
+import os
 from nltk.corpus import wordnet
 from nltk.stem.wordnet import WordNetLemmatizer
 nltk.download('averaged_perceptron_tagger')
@@ -73,5 +74,6 @@ def predict():
 
 
 if __name__ == '__main__':
- app.run(debug=True)
+ port = int(os.environ.get('PORT', 5000))
+ app.run(debug=True, port=port, host='0.0.0.0')
  print('start api')
