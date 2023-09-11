@@ -30,9 +30,9 @@ def lem_word(text):
 
 app = Flask(__name__)
 
-model = pickle.load(open("pa/reg_logit_model.pkl", "rb"))
-multilabel_binarizer = pickle.load(open("pa/multilabel_binarizer.pkl", "rb"))
-vectorizer = pickle.load(open("pa/vectorizer.pkl", "rb"))
+model = pickle.load(open("reg_logit_model.pkl", "rb"))
+multilabel_binarizer = pickle.load(open("multilabel_binarizer.pkl", "rb"))
+vectorizer = pickle.load(open("vectorizer.pkl", "rb"))
 
 
 @app.route('/predict',methods=['POST'])
