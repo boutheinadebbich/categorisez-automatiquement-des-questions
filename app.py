@@ -34,7 +34,10 @@ model = pickle.load(open("reg_logit_model.pkl", "rb"))
 multilabel_binarizer = pickle.load(open("multilabel_binarizer.pkl", "rb"))
 vectorizer = pickle.load(open("vectorizer.pkl", "rb"))
 
-
+@app.route('/',methods=['GET'])
+def test():
+  return 'hello'
+  
 @app.route('/predict',methods=['POST'])
 def predict():
 
@@ -69,6 +72,6 @@ def predict():
 
 
 
-if __name__ == '__main__':
- app.run()
- print('start api')
+#if __name__ == '__main__':
+ #app.run()
+ #print('start api')
